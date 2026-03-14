@@ -15,8 +15,14 @@ import { TeamsPage } from './components/TeamsPage';
 import { PlayersPage } from './components/PlayersPage';
 import { RegistrationsPage } from './components/RegistrationsPage';
 import { MatchesPage } from './components/MatchesPage';
+import { supabase } from '../lib/supabaseClient';
+
 
 export default function App() {
+
+  console.log("ENV OBJECT:", import.meta.env);
+  console.log("SUPABASE URL:", import.meta.env.VITE_SUPABASE_URL);
+  console.log("SUPABASE KEY:", import.meta.env.VITE_SUPABASE_ANON_KEY);
   return (
     <Router>
       <Routes>
